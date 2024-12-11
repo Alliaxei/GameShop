@@ -2,12 +2,16 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-
 from ShopApp.views import index
-
 
 from django.core.mail import send_mail
 from django.http import HttpResponse
+
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.template.loader import render_to_string
+from django.urls import reverse
+from django.utils.encoding import force_bytes, force_text
 
 def login_view(request):
     if request.method == "POST":
@@ -22,7 +26,6 @@ def login_view(request):
 
     return render(request, "account/login.html")
 def register(request):
-
     if request.method == "POST":
         password =request.POST.get("password")
         confirm_password = request.POST.get("confirm_password")

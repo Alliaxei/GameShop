@@ -5,41 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ea5347a-0341-4946-81fb-26fff14c1a1d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DjangoProjectShop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorizationApp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/RDR2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/SH2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/games_images/default-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/cart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/contacts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/logout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/account/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/catalog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/contacts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/socialaccount/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorizationApp/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorizationApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorizationApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorizationApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorizationApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

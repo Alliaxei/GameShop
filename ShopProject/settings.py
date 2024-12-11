@@ -135,7 +135,6 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = (BASE_DIR / 'media')
 MEDIA_URL = '/media/'
 
-AUTH_USER_MODEL = 'authorizationApp.CustomUser'
 
 AUTHENTICATION_BACKENDS = ()
 
@@ -167,3 +166,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "gameshopgames12@gmail.com"
 EMAIL_HOST_PASSWORD = "agmw wrsy rdjf bsav"
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1

@@ -16,7 +16,7 @@ class Game(models.Model):
 
 class Cart(models.Model):
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+       User,
         on_delete=models.CASCADE,
         null=True,
         blank=True)
