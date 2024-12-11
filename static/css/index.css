@@ -1,0 +1,244 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ccc;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.header {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #4CAF50;
+}
+
+/* Сетка карточек с адаптацией по горизонтали и вертикали */
+
+
+/* Общий стиль ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4CAF50;
+}
+
+/* Основная часть */
+.main {
+    flex: 1; /* Растягиваем основное содержимое */
+    padding: 40px 0;
+    text-align: center;
+    background-color: #262626;
+}
+
+.main h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.main p {
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Футер */
+.footer {
+    background-color: #111;
+    color: #888;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Кнопки и интерактивные элементы */
+button, .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #45a049;
+}
+
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #37a03d;
+}
+
+/* Скрытое меню по умолчанию */
+
+#user-menu-toggle {
+    position: relative;
+}
+.user-menu-container {
+    position: relative;
+}
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: #444; /* Тёмный фон немного светлее, чем #333 */
+  border-radius: 8px; /* Закругленные углы */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Немного более выраженная тень */
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Стиль для элементов меню */
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  margin: 5px 0;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: #fff; /* Белый текст для контраста */
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px; /* Закругленные углы для ссылок */
+  transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #555; /* Цвет фона при наведении */
+  color: #fff; /* Белый текст при наведении */
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.username {
+    color:   #45a049;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.username:hover {
+    color: #f4f4f4;
+}
+
+
+
+
+
+.logout-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #444; /* Фон контейнера */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    color: white; /* Цвет текста */
+    font-family: Arial, sans-serif;
+}
+
+/* Заголовок */
+.logout-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #37a03d; /* Зеленый цвет */
+}
+
+/* Сообщение */
+.logout-message {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Форма */
+.logout-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Кнопка */
+.logout-button {
+    background-color: #37a03d; /* Зеленый фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px; /* Скругленные углы */
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении */
+.logout-button:hover {
+    background-color: #2a7c2d; /* Темно-зеленый при наведении */
+}

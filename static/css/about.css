@@ -1,0 +1,78 @@
+.about-us {
+    background-color: #444;
+    color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.about-us__title, .about-us__content, .about-us__team, .about-us__vision, .about-us__testimonials {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-us__title {
+    font-size: 2.5em;
+    text-align: center;
+    animation-delay: 0.1s;
+}
+
+.about-us__content {
+    animation-delay: 0.3s;
+}
+
+.about-us__team {
+    animation-delay: 0.5s;
+}
+
+.about-us__vision {
+    animation-delay: 0.7s;
+}
+
+.about-us__testimonials {
+    animation-delay: 0.9s;
+}
+
+.about-us__testimonials .testimonial {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #555;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-us__testimonials .testimonial p {
+    margin: 0;
+    font-style: italic;
+}
+
+.about-us__testimonials .testimonial span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

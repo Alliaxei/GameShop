@@ -1,0 +1,37 @@
+    {% extends 'index.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="games-grid">
+            {% for game in games %}
+                 <div class="game-card">
+                    {% if game.image %}
+                        <img src="{{ game.image.url }}" alt="{{ game.name }} " class="game-image">
+                    {% else %}
+                        {% load static %}
+                        <img src="{% static 'images/cart.png' %}" alt="Изображение недоступно">
+                    {% endif %}
+                    <h3>{{ game.name }}</h3>
+                    <p><strong>Цена:</strong> ${{ game.price }}</p>
+{#                    <a href="{% url 'game_detail' game.id %}">Подробнее</a>#}
+                    {% load static %}
+                    <img
+                        src="{% if game.id in cart_items_ids %} 
+                                {% static 'images/checkmark.png' %}
+                             {% else %}
+                                {% static  'images/cart.png' %}
+                             {% endif %}"
+                        alt="Корзина" class="cart-icon"
+                        data-game-id="{{ game.id }}"
+                        data-add-to-cart-url="{% url 'add_to_cart' %}"
+                        data-checkmark-url = "{% static 'images/checkmark.png' %}"
+                        data-cart-url = "{% static 'images/cart.png' %}"
+                        data-remove-url="{% url 'remove_from_cart' %}">
+                </div>
+            {% endfor %}
+                   <script>
+                        const csrfToken = "{{ csrf_token }}";
+                    </script>
+        </div>
+    </div>
+{% endblock %}

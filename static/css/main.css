@@ -1,0 +1,110 @@
+.games-grid {
+    display: flex;
+    flex-wrap: wrap; /* Позволяем перенос карточек на новую строку */
+    gap: 20px; /* Отступы между карточками */
+    justify-content: center; /* Выравнивание карточек по центру */
+    padding: 10px;
+}
+
+/* Карточки остаются такими же */
+.game-card {
+    position: relative;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(25% - 20px); /* Адаптивная ширина карточки */
+    max-width: calc(25% - 20px); /* Максимальная ширина карточки */
+    min-width: 250px; /* Минимальная ширина карточки */
+    opacity: 0; /* Для анимации появления */
+    transform: translateY(20px); /* Исходная позиция */
+    animation: fadeInUp 0.6s ease forwards; /* Анимация появления */
+}
+
+/* Ключевые кадры для появления карточек */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Изображение игры */
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(0.9); /* Немного уменьшено */
+    animation: zoomIn 0.5s ease forwards; /* Анимация масштабирования */
+    animation-delay: 0.2s; /* Задержка для синхронизации */
+}
+
+/* Ключевые кадры для масштабирования изображения */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Название игры */
+.game-card h3 {
+    font-size: 18px;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+/* Цена игры */
+.game-card p {
+    font-size: 16px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-icon {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    cursor: pointer;
+    transform: scale(0.8); /* Уменьшенный размер для анимации */
+    animation: fadeInScale 0.5s ease forwards; /* Анимация появления и масштабирования */
+    animation-delay: 0.4s; /* Задержка для синхронизации */
+}
+
+/* Анимация появления значка корзины */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+.cart-icon:hover {
+    opacity: 1;
+}

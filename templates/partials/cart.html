@@ -1,0 +1,41 @@
+    {% extends 'index.html' %}
+
+{% block content %}
+    <div class="cart-items-container">
+        {% if items %}
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Игра</th>
+                        <th>Количество</th> 
+                        <th>Цена</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>
+                                <div class="game-info">
+                                    <img src="{{ item.game.image.url }}" alt="{{ item.game.name }}" class="game-image">
+                                    <span>{{ item.game.name }}</span>
+                                </div>
+                            </td>
+                            <td>{{ item.quantity }}</td>
+                            <td>{{ item.total_price }}</td>
+                            <td>
+                                <button class="remove-btn" data-game-id="{{ item.game.id }}" data-remove-url="{% url 'remove_from_cart' %}">Удалить</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="cart-actions">
+                <p class="price-label">Общая стоимость: X</p><br>
+                <button class="order-btn">Оформить заказ</button>
+            </div>
+        {% else %}
+            <p>Корзина пуста.</p>
+        {% endif %}
+    </div>
+{% endblock %}
