@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.form-sections {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.user-info, .password-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #2b2b2b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.user-info label, .password-info label {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+/*Кнопка подтверждения*/
+
+/*Поля для ввода*/
+
+input[readonly] {
+    color: #b3b3b3;
+    background-color: #2b2b2b;
+    cursor: not-allowed;
+}

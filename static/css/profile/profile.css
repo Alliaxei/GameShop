@@ -1,0 +1,144 @@
+.profile-container {
+    display: flex;
+}
+
+.sidebar {
+    margin-left: 10px;
+    width: 250px;
+    background-color: #3a3a3a;
+    padding: 20px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+    min-height: 700px;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.toggle-sidebar-btn {
+    outline: none;
+}
+@-moz-document url-prefix() {
+    .toggle-sidebar-btn:focus {
+        outline: none; /* Убираем фокус только в Firefox */
+    }
+}
+.sidebar h3 {
+    font-size: 24px;
+    margin: 0;
+}
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-item  {
+    margin-bottom: 15px;
+
+}
+
+.sidebar-item a {
+
+    display: inline-block;
+    text-decoration: none;
+    color: #cecece;
+    font-size: 18px;
+    background-color: #4d4d4d;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+.sidebar-item a:hover {
+     background-color: #646464;
+}
+.sidebar-item a.active {
+    background-color: #646464;
+}
+
+/*Сворачивание раздела*/
+.profile-content {
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    flex: 1;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    transition: width 0.3s ease;
+}
+
+/* Скрываем заголовки и пункты меню в свернутом состоянии */
+.sidebar.collapsed .sidebar-header h3,
+.sidebar.collapsed .sidebar-links {
+    display: none;
+}
+
+/* Центрируем кнопку в свернутом состоянии */
+.sidebar.collapsed .toggle-sidebar-btn {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Кнопка переключения */
+.toggle-sidebar-btn {
+    background: none;
+    border: none;
+    color: #cecece;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Поворот кнопки при сворачивании */
+.sidebar.collapsed .toggle-sidebar-btn {
+    transform: rotate(180deg);
+}
+
+
+/*Общие стили*/
+input[type="text"], input[type="email"], input[type="password"] {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    background-color: #333333;
+    border-radius: 10px;
+    outline: none;
+    transition: ease 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    background-color: #505050;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.save-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.save-button:active {
+    background-color: #3e8e41; /* Более темный оттенок при нажатии */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень уменьшается */
+}

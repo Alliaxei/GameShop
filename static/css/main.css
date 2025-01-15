@@ -86,25 +86,41 @@
     bottom: 10px;
     width: 40px;
     height: 40px;
-    opacity: 0;
+    opacity: 0.85;
     cursor: pointer;
-    transform: scale(0.8); /* Уменьшенный размер для анимации */
-    animation: fadeInScale 0.5s ease forwards; /* Анимация появления и масштабирования */
-    animation-delay: 0.4s; /* Задержка для синхронизации */
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease ;
+}
+.cart-icon:hover {
+    opacity: 1;
+    transform: scale(1.05)
 }
 
 /* Анимация появления значка корзины */
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 0.7;
-        transform: scale(1);
-    }
+/*@keyframes fadeInScale {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: scale(0.8);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 0.7;*/
+/*        transform: scale(1);*/
+/*    }*/
+/*}*/
+
+
+.game-card {
+    transition: transform 0.3s ease;
 }
 
-.cart-icon:hover {
-    opacity: 1;
+.game-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+form {
+    display: contents;
+}
+button {
+    display: contents;
 }

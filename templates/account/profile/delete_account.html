@@ -1,0 +1,17 @@
+{% extends "account/profile/profile.html" %}
+{% block extra_css %}
+    {% load static %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/profile/delete_account.css' %}">
+{% endblock %}
+{% block profile_section %}
+    <div class="delete-account-container">
+    <h2 class="title">Удаление аккаунта</h2>
+    <p class="description">Вы уверены, что хотите удалить свой аккаунт? Это действие необратимо.</p>
+    <form method="POST" class="delete-form">
+        {% csrf_token %}
+        <button type="submit" class="btn-confirm">Удалить аккаунт</button>
+        <a href="{% url 'profile' %}" class="btn-cancel">Отмена</a>
+    </form>
+</div>
+{% endblock profile_section %}

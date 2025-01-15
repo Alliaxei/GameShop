@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
 /* Основной контейнер */
 .cart-container {
     padding: 20px;
@@ -25,6 +27,7 @@
 
 /* Таблица */
 .cart-table {
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -53,11 +56,10 @@
 }
 
 .cart-table .game-image {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 70px;
     object-fit: cover;
     margin-right: 10px;
-    border: 1px solid #37a03d;
     border-radius: 5px;
 }
 
@@ -93,10 +95,6 @@
     width: 300px;
 }
 
-.remove-btn:hover {
-    background-color: #2a7e2c;
-}
-
 .order-btn {
     margin-top: 20px;
     display: inline-block;
@@ -127,4 +125,19 @@
 .price-label {
     align-self: flex-end;
     margin-right: 40px;
+}
+
+
+.remove-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.remove-btn img {
+        transition: filter 0.3s ease;
+    }
+
+.remove-btn:hover img {
+   filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(600%) hue-rotate(-10deg) brightness(110%) contrast(105%);
+
 }

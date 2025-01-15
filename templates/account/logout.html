@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{#{% extends "account/base_manage.html" %}#}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/logout.css' %}">
 
@@ -13,15 +12,19 @@
             {% trans "Sign Out" %}
         </h1>
         <p class="logout-message">
-            {% trans 'Are you sure you want to sign out?' %}
+            {% trans 'Вы уверены, что хотите выйти?' %}
         </p>
         {% url 'account_logout' as action_url %}
-        <form method="post" action="{{ action_url }}" class="logout-form">
-            {% csrf_token %}
-            {{ redirect_field }}
-            <button type="submit" class="logout-button">
-                {% trans 'Sign Out' %}
-            </button>
-        </form>
+        <div class="choice">
+             <a class="go-back" href="/">Остаться</a>
+            <form method="post" action="{{ action_url }}" class="logout-form">
+                {% csrf_token %}
+                {{ redirect_field }}
+                <button type="submit" class="logout-button">
+                    {% trans 'Выйти' %}
+                </button>
+            </form>
+        </div>
+
     </div>
 {% endblock content %}

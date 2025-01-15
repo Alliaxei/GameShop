@@ -4,14 +4,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ea5347a-0341-4946-81fb-26fff14c1a1d" name="Changes" comment="">
+    <list default="true" id="5ea5347a-0341-4946-81fb-26fff14c1a1d" name="Changes" comment="Начинаю делать подтверждение в письме">
+      <change afterPath="$PROJECT_DIR$/ShopApp/gamespot_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopApp/rawg_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShopApp/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/catalog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/email_verify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/extended_info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/profile/delete_account.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/profile/edit_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/profile/payment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/profile/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/bin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/google.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/screenshot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/profile/delete_account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/profile/edit_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/profile/payments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/profile/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials/extended_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85931403-204f-479c-a5f5-2f6824d09b86.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/85931403-204f-479c-a5f5-2f6824d09b86/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopApp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopApp/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopApp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShopProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorizationApp/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorizationApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorizationApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShopProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ShopProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorizationApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authorizationApp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/games_images/RDR2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/games_images/SH2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/games_images/default-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/about.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/logout.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/logout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/contacts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +80,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Alliaxei&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Alliaxei/GameShop.git&quot;,
+    &quot;accountId&quot;: &quot;181b38e2-c953-4914-ad1b-5d984fc887b6&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -68,11 +126,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Django\DjangoProject\static\css\profile" />
+      <recent name="D:\Programming\Django\DjangoProject\templates\account\profile" />
       <recent name="D:\Programming\Django\DjangoProject\static\images" />
+      <recent name="D:\Programming\Django\DjangoProject\templates\account" />
       <recent name="D:\Programming\Django\DjangoProject\media\games_images" />
-      <recent name="D:\Programming\Django\DjangoProject" />
-      <recent name="D:\Programming\Django\DjangoProject\ShopApp\static" />
-      <recent name="D:\Programming\Django\DjangoProject\ShopApp" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,8 +163,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
+        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
       </set>
     </attachedChunks>
   </component>
@@ -149,7 +207,78 @@
       <workItem from="1733893468844" duration="5201000" />
       <workItem from="1733901328944" duration="1181000" />
       <workItem from="1733906243515" duration="5210000" />
+      <workItem from="1733928772234" duration="283000" />
+      <workItem from="1733980921899" duration="728000" />
+      <workItem from="1733989566158" duration="2188000" />
+      <workItem from="1733994089230" duration="169000" />
+      <workItem from="1733994902783" duration="3036000" />
+      <workItem from="1734013062317" duration="1324000" />
+      <workItem from="1734075899176" duration="1912000" />
+      <workItem from="1734080257129" duration="6907000" />
+      <workItem from="1734088927639" duration="3738000" />
+      <workItem from="1734192400310" duration="73000" />
+      <workItem from="1734281056678" duration="4791000" />
+      <workItem from="1734326298026" duration="11000" />
+      <workItem from="1734343629514" duration="3665000" />
+      <workItem from="1734411830972" duration="5327000" />
+      <workItem from="1734418236524" duration="4785000" />
+      <workItem from="1734424564875" duration="3599000" />
+      <workItem from="1734429144423" duration="419000" />
+      <workItem from="1734457289087" duration="731000" />
+      <workItem from="1734498750581" duration="5023000" />
+      <workItem from="1734508349495" duration="3644000" />
+      <workItem from="1734515035372" duration="61000" />
+      <workItem from="1734515599704" duration="9000" />
+      <workItem from="1734515681722" duration="101000" />
+      <workItem from="1734516940664" duration="730000" />
+      <workItem from="1734518220684" duration="878000" />
+      <workItem from="1734522989859" duration="764000" />
+      <workItem from="1734525556726" duration="36000" />
+      <workItem from="1734535603218" duration="3842000" />
+      <workItem from="1734584850426" duration="70000" />
+      <workItem from="1734590802964" duration="363000" />
+      <workItem from="1734607500382" duration="4976000" />
+      <workItem from="1734626326577" duration="11000" />
+      <workItem from="1734681597541" duration="8181000" />
+      <workItem from="1734696064578" duration="1209000" />
+      <workItem from="1735052857173" duration="2344000" />
+      <workItem from="1735138530634" duration="1081000" />
+      <workItem from="1735287804631" duration="3065000" />
+      <workItem from="1735292671699" duration="3587000" />
+      <workItem from="1735308599233" duration="697000" />
+      <workItem from="1735382188170" duration="793000" />
+      <workItem from="1735543511885" duration="755000" />
+      <workItem from="1735551167375" duration="816000" />
+      <workItem from="1735834456565" duration="597000" />
+      <workItem from="1735838534357" duration="856000" />
+      <workItem from="1736327181290" duration="14974000" />
+      <workItem from="1736354379118" duration="4244000" />
+      <workItem from="1736433220168" duration="3371000" />
+      <workItem from="1736495661171" duration="2598000" />
+      <workItem from="1736506627170" duration="6505000" />
+      <workItem from="1736521509973" duration="451000" />
+      <workItem from="1736522279673" duration="604000" />
+      <workItem from="1736586287840" duration="1481000" />
+      <workItem from="1736602752748" duration="2816000" />
+      <workItem from="1736686429476" duration="5897000" />
+      <workItem from="1736750026788" duration="9262000" />
+      <workItem from="1736769531192" duration="1613000" />
+      <workItem from="1736775847267" duration="1363000" />
+      <workItem from="1736782838124" duration="3146000" />
+      <workItem from="1736847761522" duration="8000000" />
+      <workItem from="1736863860349" duration="4272000" />
+      <workItem from="1736881094607" duration="587000" />
+      <workItem from="1736926549208" duration="2924000" />
     </task>
+    <task id="LOCAL-00001" summary="Начинаю делать подтверждение в письме">
+      <option name="closed" value="true" />
+      <created>1733920464251</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733920464251</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,5 +294,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Начинаю делать подтверждение в письме" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начинаю делать подтверждение в письме" />
   </component>
 </project>

@@ -1,5 +1,83 @@
-{% extends 'index.html' %}
+    {% extends 'index.html' %}
+    {% block extra_css %}
+        {% load static %}
+       <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+        <meta name="csrf-token" content="{{ csrf_token }}">
+    {% endblock %}
+    {% block content %}
+        <div class="catalog-container">
+            <div class="catalog-filters">
+                 <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                 <div class="catalog-filter-search">
+                        <label for="search">Поиск</label>
+                        <input type="text" id="search" name="search" placeholder="Введите название игры">
+                    </div>
+                <div class="catalog-filter-category">
+                    <label for="category">Жанр</label>
+                    <select id="category" name="category">
+                        <option value="">Все категории</option>
+                        <option value="action">Экшен</option>
+                        <option value="adventure">Приключения</option>
+                        <option value="rpg">РПГ</option>
+                        <option value="strategy">Стратегии</option>
+                    </select>
+                </div>
 
-{% block content %}
-    <h1>Каталог</h1>
-{% endblock %}
+                <div class="catalog-filter-price">
+                    <label for="price-range">Ценовой диапазон</label>
+                    <input type="range" id="price-range" name="price-range" min="0" max="100" step="10">
+                    <span id="price-value">0 - 50</span>
+                </div>
+                 <button class="apply-changes"
+                         id="apply-filters">
+                     <span>Применить</span>
+                 </button>
+
+            </div>
+
+            <div class="catalog-games-container">
+                <div class="catalog-games-grid">
+                    {% for game in games %}
+                        <form method="post" action="{% url 'extended_info' game.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="game-details-link">
+                                    <div class="catalog-game-card">
+                                    {% if game.image %}
+                                        <img src="{{ game.image.url }}" alt="{{ game.name }}" class="catalog-game-image">
+                                    {% else %}
+                                        {% load static %}
+                                        <img src="{% static 'images/cart.png' %}" alt="Изображение недоступно" class="catalog-game-image">
+                                    {% endif %}
+                                    <h3>{{ game.name }}</h3>
+                                    <p><strong>Цена:</strong> ${{ game.price }}</p>
+                                    <img
+                                        src="{% if game.id in cart_items_ids %}
+                                            {% static 'images/checkmark.png' %}
+                                         {% else %}
+                                            {% static 'images/cart.png' %}
+                                         {% endif %}"
+                                        alt="Корзина"
+                                        class="cart-icon"
+                                        data-game-id="{{ game.id }}"
+                                        data-add-to-cart-url="{% url 'add_to_cart' %}"
+                                        data-checkmark-url="{% static 'images/checkmark.png' %}"
+                                        data-cart-url="{% static 'images/cart.png' %}"
+                                        data-remove-url="{% url 'remove_from_cart' %}">
+                                </div>
+                                </button>
+                            </form>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('price-range').addEventListener('input', function() {
+                document.getElementById('price-value').textContent = `0 - ${this.value}`;
+            });
+        </script>
+        {% load static %}
+            <script src="{% static 'js/search.js' %}"></script>
+            <script src="{% static 'js/filter.js' %}"></script>
+    {% endblock %}

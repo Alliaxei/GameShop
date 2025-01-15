@@ -49,3 +49,10 @@
 .logout-button:hover {
     background-color: #2a7c2d; /* Темно-зеленый при наведении */
 }
+.choice {
+    display: flex;
+
+}
+.go-back {
+    color: #0F4FE6;
+}

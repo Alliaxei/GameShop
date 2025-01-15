@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile/profile.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="profile-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Профиль</h3>
+                <div class="toggle-sidebar-btn" aria-label="Свернуть/развернуть панель">☰</div>
+            </div>
+            <ul class="sidebar-links">
+                <li class="sidebar-item">
+                    <a href="{% url 'edit_profile' %}">
+                         ✎ Редактирование профиля
+                    </a>
+                </li>
+                  <li class="sidebar-item">
+                     <a href="{% url 'payments' %}">
+                         Привязка платежей
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                     <a href="{% url 'delete_account' %}">
+                         Удаление аккаунта
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="profile-content">
+            {% block profile_section %}
+            {% endblock %}
+        </div>
+    </div>
+    {% load static %}
+    <script src="{% static 'js/sidebar.js' %}"></script>
+{% endblock content %}

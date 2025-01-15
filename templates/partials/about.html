@@ -1,35 +1,72 @@
 {% extends 'index.html' %}
+{% block extra_css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 
 {% block content %}
-<div class="about-us">
-    <h1 class="about-us__title">О нас</h1>
-    <div class="about-us__content">
-        <p>Добро пожаловать в наш интернет-магазин, посвященный играм! Мы стремимся предоставить вам лучшие предложения, качественный сервис и уникальный опыт покупок.</p>
-        <p>Наша команда состоит из настоящих энтузиастов, которые любят игры так же, как и вы. Мы работаем, чтобы каждый наш клиент был доволен.</p>
-    </div>
-    <div class="about-us__team">
-        <h2>Наша команда</h2>
-        <ul>
-            <li>Иван Иванов — Основатель</li>
-            <li>Мария Петрова — Менеджер по продукту</li>
-            <li>Анна Смирнова — Дизайнер</li>
-            <li>Дмитрий Кузнецов — Разработчик</li>
-        </ul>
-    </div>
-    <div class="about-us__vision">
-        <h2>Наша миссия</h2>
-        <p>Мы стремимся объединить людей через игры, создавая пространство для творчества, дружбы и веселья.</p>
-    </div>
-    <div class="about-us__testimonials">
-        <h2>Отзывы клиентов</h2>
-        <div class="testimonial">
-            <p>"Отличный магазин с огромным выбором игр. Сервис на высоте!"</p>
-            <span>- Александр</span>
+    <div class="about-section">
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-text">
+                <h2>О нас</h2>
+                <p>
+                    Мы — команда разработчиков, стремящихся создать лучшие продукты для наших пользователей.
+                    Мы работаем над инновационными проектами, чтобы улучшить повседневную жизнь и обеспечить комфорт.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" alt="Teamwork" class="about-img">
+
+            </div>
         </div>
-        <div class="testimonial">
-            <p>"Очень приятный опыт покупок, буду возвращаться снова и снова."</p>
-            <span>- Екатерина</span>
+
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-image">
+             <img src="https://images.pexels.com/photos/3183198/pexels-photo-3183198.jpeg" alt="Office Work" class="about-img">
+
+            </div>
+            <div class="about-text">
+                <h2>Наша миссия</h2>
+                <p>
+                    Наша цель — создавать инновационные решения, которые полезны и вдохновляют пользователей на новые достижения. Мы стремимся к созданию продуктов, которые помогают нашим клиентам решать их задачи.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-text">
+                <h2>Наши ценности</h2>
+                <p>
+                    Мы ценим честность, творчество, командную работу и стремление к совершенству в каждой детали. Эти ценности лежат в основе всего, что мы делаем.
+                </p>
+            </div>
+            <div class="about-image">
+           <img src="https://images.pexels.com/photos/3770312/pexels-photo-3770312.jpeg" alt="Game Controller and Games" class="about-img">
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="about-container" data-aos="fade-up">
+            <div class="about-text">
+                <h2>Почему мы?</h2>
+                <p>
+                    Мы понимаем потребности пользователей и находим оптимальные решения для каждой задачи. Наша команда готова работать на результат, предлагая лучшие продукты и услуги на рынке.
+                </p>
+            </div>
+            <div class="about-image">
+              <img src="https://images.pexels.com/photos/3182771/pexels-photo-3182771.jpeg" alt="Young Team" class="about-img">
+
+
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}

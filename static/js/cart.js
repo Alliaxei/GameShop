@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartIcons = document.querySelectorAll('.cart-icon');
     const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
 
-    //Добавление/Удаление из корзины
+    // Добавление/Удаление из корзины
     cartIcons.forEach(function (icon) {
         icon.addEventListener('click', function (e) {
+            console.log("Добавление объекта в корзину");
             e.preventDefault();
+            e.stopPropagation();
+
             const gameId = icon.getAttribute('data-game-id');
             const addToCartUrl = icon.getAttribute('data-add-to-cart-url');
             const checkmarkUrl = icon.getAttribute('data-checkmark-url');
@@ -13,8 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const removeFromCartUrl = icon.getAttribute('data-remove-url');
             const cartIconDefaultUrl = icon.getAttribute('data-cart-url');
 
-            //Удаление из корзины
+            //Добавление
             if (cartIconSrc.includes('cart.png')) {
+                console.log("Настоящее добавление в корзину");
+
+                icon.disabled = true;
+
                 fetch( addToCartUrl, {
                     method: 'POST',
                     headers: {
@@ -36,9 +43,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                     .catch(error => {
                         console.error('Ошибка при добавлении в корзину ' + error.message);
-                });
-                //Добавление в корзину
+                })
+                    .finally(() => {
+                        icon.disabled = false;
+                    });
+                //Удаление
                 } else {
+
                     fetch(removeFromCartUrl, {
                         method: 'DELETE',
                         headers: {
@@ -64,7 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleRemoveClick(e) {
         e.preventDefault();
-        const btn = e.target;
+        //Передача необходимых данных из кнопки, а не из img внутри
+        const btn = e.target.closest('.remove-btn');
+        if (!btn) return;
+
         const gameId = btn.getAttribute('data-game-id');
         const removeUrl = btn.getAttribute('data-remove-url');
 
@@ -94,14 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function checkEmptyCart() {
-        const cartContainer = document.querySelector('.cart-items-container')
-        const cartRows = document.querySelectorAll('tr');
-
-            if (cartRows.length === 0) {
-                cartContainer.innerHTML = '<p>Корзина пуста</p>';
-        }
-    }
+    // function checkEmptyCart() {
+    //     const cartContainer = document.querySelector('.cart-items-container')
+    //     const cartRows = document.querySelectorAll('tr');
+    //
+    //         if (cartRows.length === 0) {
+    //             cartContainer.innerHTML = '<p>Корзина пуста</p>';
+    //     }
+    // }
 
     function setRemoveButtonsEventListeners() {
         const removeBtns = document.querySelectorAll('.remove-btn');

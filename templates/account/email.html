@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подтверждение</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/email_verify.css' %}">
+</head>
+<body>
+<div class="message">
+    <h1>Ваш аккаунт успешно подтверждён!</h1>
+    <p>Вы будете перенаправлены на главную страницу через несколько секунд.</p>
+    <p>Если перенаправление не произошло, <a href="/static">нажмите здесь</a>.</p>
+</div>
+<script>
+    setTimeout(function () {
+        window.location.href = '/';
+    }, 4000);
+</script>
+</body>
+</html>

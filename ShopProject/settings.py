@@ -13,7 +13,10 @@ SECRET_KEY = 'django-insecure-%f=fj-s@qw5(4gtnkgl1x_y2u!0p$f%zmp72+)(2%grh(i6yub
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+   '*',
+]
+CSRF_TRUSTED_ORIGINS = ['https://*.ngrok-free.app']
 
 
 # Application definition
@@ -119,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -150,12 +153,14 @@ AUTHENTICATION_BACKENDS = [
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
 ACCOUNT_EMAIL_REQUIRED = True  # Требовать email
 ACCOUNT_USERNAME_REQUIRED = False  # Не требовать имя пользователя
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'  # Использовать email для входа
 SOCIALACCOUNT_EMAIL_VERIFICATION = 'optional'  # Верификация email через соцсети
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 ACCOUNT_SIGNUP_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = "/"
@@ -168,3 +173,5 @@ EMAIL_HOST_USER = "gameshopgames12@gmail.com"
 EMAIL_HOST_PASSWORD = "agmw wrsy rdjf bsav"
 
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+
+GAME_SPOT_API_KEY = '10404e89d289da081ad7c94d4723c727725f37ad'

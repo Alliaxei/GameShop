@@ -5,14 +5,16 @@ from django.conf import settings
 
 class Game(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False)
-    description = models.TextField(blank=True, null=True)
-    release_date = models.DateField(blank=False, null=False)
-    price = models.FloatField(blank=False, null=False)
-    genre = models.CharField(max_length=100, blank=False, null=False)
-    publisher = models.CharField(max_length=100, blank=False, null=False)
-    developer = models.CharField(max_length=100, blank=False, null=False)
+    release_date = models.DateTimeField(blank=False, null=False)
+    price = models.IntegerField(blank=True, null=True)
+    genre = models.CharField(max_length=255, blank=False, null=False)
+    metacritic = models.CharField(max_length=255, blank=True, null=True)
+    playtime = models.IntegerField(blank=True, null=True)
     image = models.ImageField(upload_to='games_images/', blank=True, null=True)
-    quantity = models.IntegerField(blank=True, null=True)
+
+class Screenshot(models.Model):
+    game = models.ForeignKey(Game, related_name='screenshots', on_delete=models.CASCADE)
+    url = models.URLField(blank=False, null=False)
 
 class Cart(models.Model):
     user = models.ForeignKey(
@@ -34,7 +36,10 @@ class Cart(models.Model):
         return sum(item.quantity for item in self.items.all())
 
 class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
+    cart = models.ForeignKey(
+                Cart,
+                on_delete=models.CASCADE,
+                related_name='items')
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
 

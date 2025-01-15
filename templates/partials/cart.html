@@ -1,5 +1,8 @@
     {% extends 'index.html' %}
-
+{% block extra_css %}
+    {% load static %}
+   <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
 {% block content %}
     <div class="cart-items-container">
         {% if items %}
@@ -7,7 +10,6 @@
                 <thead>
                     <tr>
                         <th>Игра</th>
-                        <th>Количество</th> 
                         <th>Цена</th>
                         <th>Удалить</th>
                     </tr>
@@ -21,17 +23,19 @@
                                     <span>{{ item.game.name }}</span>
                                 </div>
                             </td>
-                            <td>{{ item.quantity }}</td>
-                            <td>{{ item.total_price }}</td>
+                            <td>{{ item.total_price }}$</td>
                             <td>
-                                <button class="remove-btn" data-game-id="{{ item.game.id }}" data-remove-url="{% url 'remove_from_cart' %}">Удалить</button>
+
+                                <button class="remove-btn" data-game-id="{{ item.game.id }}" data-remove-url="{% url 'remove_from_cart' %}" style="background: none; border: none; cursor: pointer;">
+                                    <img src="{% static 'images/bin.png' %}" alt="Remove">
+                                </button>
                             </td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
             <div class="cart-actions">
-                <p class="price-label">Общая стоимость: X</p><br>
+                <p class="price-label">Общая стоимость: X$</p><br>
                 <button class="order-btn">Оформить заказ</button>
             </div>
         {% else %}

@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+{% block extra_css %}
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bevan:ital@0;1&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/extended_info.css' %}">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container-extended">
+        <!-- Заголовок с названием игры -->
+        <div class="game-title">{{ game.name }}</div>
+
+        <!-- Основной блок информации -->
+        <div class="main-content">
+            <!-- Левая колонка с изображением и описанием -->
+            <div class="left-column">
+                <div class="game-banner">
+                    <img src="{{ game.image.url }}" alt="{{ game.name }}" class="game-image">
+                </div>
+                <div class="carousel">
+                    {% for screenshot in screenshots %}
+                        <img src="{{ screenshot.url }}" alt="Скриншот {{ forloop.counter }}" class="carousel-image">
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Правая колонка с деталями и кнопками -->
+            <div class="right-column">
+               <div class="game-info">
+                    <div class="info-row">
+                        <span class="info-title">Жанры</span>
+                        <span class="info-value">{{ game.genre }}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-title">Дата выхода</span>
+                        <span class="info-value">{{ game.release_date|date:"d M Y" }}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-title">Оценка Metacritic</span>
+                        <span class="info-value">{{ game.metacritic }}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-title">Среднее время прохождения</span>
+                        <span class="info-value">{{ game.playtime }} ч.</span>
+                    </div>
+               </div>
+                <div class="purchase-section">
+                    <div class="price">{{ game.price }}$</div>
+                    <a href="#" class="buy-button">Купить сейчас</a>
+                    {% if game.id in cart_items_ids %}
+                        <a href="{% url 'cart' %}" class="show-in-cart-button">Посмотреть в корзине</a>
+                    {% else %}
+                        <form action="{% url 'add_to_cart_form' %}" method="post">
+                        {% csrf_token %}
+                            <input type="hidden" name="game_id" value="{{ game.id }}">
+                            <button type="submit" class="add-to-cart-button">Добавить в корзину</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% load static %}
+    <script src="{% static 'js/screenshot.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".game-banner .game-image");
+            images.forEach((image) => {
+                const img = new Image();
+                img.src = image.src;
+
+                img.onload = function () {
+                    if (img.naturalWidth === img.naturalHeight || img.naturalWidth > 550) {
+                        image.style.objectFit = "cover";
+                    } else {
+                        image.style.objectFit = "contain";
+                    }
+                };
+            });
+        });
+    </script>
+</body>
+{% endblock %}

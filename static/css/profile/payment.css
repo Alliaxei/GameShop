@@ -1,0 +1,88 @@
+.payment-form {
+    background-color: #2b2b2b;
+    color: #cecece;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    /*margin: 0 auto;*/
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
+    margin-bottom: 50px;
+
+}
+.content-inside {
+    display: flex;
+
+}
+
+.left {
+    margin: 10px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+     margin: 10px;
+}
+.payment-form .form-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.payment-form .form-group {
+    margin-bottom: 15px;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #cecece;
+}
+
+.payment-form .form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.payment-form .form-row .form-group {
+    flex: 1;
+}
+
+.payment-form .btn-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #cecece;
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-form .btn-submit:hover {
+    background-color: #ffffff;
+    color: #4d4d4d;
+}
+input[type="text"] {
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    background-color: #333333;
+    border-radius: 10px;
+    outline: none;
+    transition: ease 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    background-color: #505050;
+}
+
+.right input {
+    width: 130px;
+}
